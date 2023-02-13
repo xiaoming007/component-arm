@@ -1,0 +1,401 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>依赖注入 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../组件化方案分析.html">
+            
+                <a href="../组件化方案分析.html">
+            
+                    
+                    组件化方案分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    基础sdk
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="使用dagger2.html">
+            
+                <a href="使用dagger2.html">
+            
+                    
+                    依赖注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    base
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic/base.html">
+            
+                <a href="../basic/base.html">
+            
+                    
+                    base
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../http/三方库工具.html">
+            
+                <a href="../http/三方库工具.html">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    MVVM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../mvvm/基类的处理.html">
+            
+                <a href="../mvvm/基类的处理.html">
+            
+                    
+                    基类的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    屏幕适配
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../autosize/autosize工具的使用分析.html">
+            
+                <a href="../autosize/autosize工具的使用分析.html">
+            
+                    
+                    autosize工具的使用分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >依赖注入</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F9D;&#x8D56;&#x6CE8;&#x5165;">&#x4F9D;&#x8D56;&#x6CE8;&#x5165;</h1>
+<h3 id="&#x63D0;&#x4F9B;&#x4F9D;&#x8D56;&#x7C7B;&#x7684;&#x65B9;&#x5F0F;">&#x63D0;&#x4F9B;&#x4F9D;&#x8D56;&#x7C7B;&#x7684;&#x65B9;&#x5F0F;</h3>
+<ul>
+<li>1.&#x5BF9;&#x4E8E;&#x81EA;&#x5DF1;&#x5B8C;&#x5168;&#x53EF;&#x63A7;&#x7684;&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6CE8;&#x5165;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4F7F;&#x7528;@Inject&#x6CE8;&#x89E3;&#x6784;&#x9020;&#x51FD;&#x6570;  </li>
+<li>2.&#x5BF9;&#x4E8E;&#x50CF;Activity&#xFF0C;&#x7B49;&#x8FD9;&#x79CD;&#x6709;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;@Module&#x7136;&#x540E;&#x901A;&#x8FC7;provider&#x7684;&#x5F62;&#x5F0F;&#x63D0;&#x4F9B;  </li>
+</ul>
+<h3 id="&#x4F7F;&#x7528;component">&#x4F7F;&#x7528;@component</h3>
+<ul>
+<li>1.&#x901A;&#x8FC7;&#x63A5;&#x53E3;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x4E0E;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#xFF0C;&#x6765;&#x63D0;&#x4F9B;&#x4F60;&#x60F3;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BB9;&#x5668;&#x4F1A;&#x901A;&#x8FC7;&#x56FE;&#x53BB;&#x521B;&#x5EFA;&#x5176;&#x6240;&#x6709;&#x7684;&#x4F9D;&#x8D56;&#x9879;&#x3002;  </li>
+<li>2.&#x901A;&#x8FC7;inject&#x65B9;&#x6CD5;&#xFF0C;&#x6765;&#x786E;&#x8BA4;&#x5C06;&#x8FD9;&#x4E2A;&#x7EC4;&#x5EFA;&#x4F7F;&#x7528;&#x5728;&#x54EA;&#x91CC;&#x3002;</li>
+<li>3.&#x901A;&#x8FC7; @Inject lateinit var loginViewModel: LoginViewModel&#x8FD9;&#x4E2A;&#x65B9;&#x5F0F;&#x5411;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6CE8;&#x5165;&#x7684;&#x7C7B;&#x4E2D;&#x6CE8;&#x5165;&#x4F9D;&#x8D56;&#xFF0C;&#x4F8B;&#x5982;activity  </li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 基础sdk">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../" class="navigation navigation-next " aria-label="Next page: base">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"依赖注入","level":"1.2.1","depth":2,"next":{"title":"base","level":"1.3","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"base","level":"1.3.1","depth":2,"path":"basic/base.md","ref":"basic/base.md","articles":[]}]},"previous":{"title":"基础sdk","level":"1.2","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"依赖注入","level":"1.2.1","depth":2,"path":"dagger2/使用dagger2.md","ref":"dagger2/使用dagger2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dagger2/使用dagger2.md","mtime":"2023-02-13T14:55:08.985Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-02-13T14:55:48.966Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
